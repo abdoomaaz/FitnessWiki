@@ -56,15 +56,55 @@
 		6E83F971285B94470070A8A9 /* FitnessWiki */ = {
 			isa = PBXGroup;
 			children = (
-				6E83F972285B94470070A8A9 /* AppDelegate.swift */,
-				6E83F974285B94470070A8A9 /* SceneDelegate.swift */,
+				6EE0E243285BA0690048D036 /* AppDelegate */,
+				6EE0E244285BA0B20048D036 /* Extensions */,
+				6EE0E245285BA0C00048D036 /* Modules */,
 				6E83F976285B94470070A8A9 /* ViewController.swift */,
+				6EE0E246285BA0EC0048D036 /* Networking */,
+				6E83F986285B9F7B0070A8A9 /* Resources */,
 				6E83F978285B94470070A8A9 /* Main.storyboard */,
-				6E83F97B285B94480070A8A9 /* Assets.xcassets */,
 				6E83F97D285B94480070A8A9 /* LaunchScreen.storyboard */,
-				6E83F980285B94480070A8A9 /* Info.plist */,
 			);
 			path = FitnessWiki;
+			sourceTree = "<group>";
+		};
+		6E83F986285B9F7B0070A8A9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6E83F980285B94480070A8A9 /* Info.plist */,
+				6E83F97B285B94480070A8A9 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		6EE0E243285BA0690048D036 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				6E83F972285B94470070A8A9 /* AppDelegate.swift */,
+				6E83F974285B94470070A8A9 /* SceneDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		6EE0E244285BA0B20048D036 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		6EE0E245285BA0C00048D036 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		6EE0E246285BA0EC0048D036 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,7 +328,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = FitnessWiki/Info.plist;
+				INFOPLIST_FILE = FitnessWiki/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -315,7 +355,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = FitnessWiki/Info.plist;
+				INFOPLIST_FILE = FitnessWiki/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
