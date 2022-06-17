@@ -46,8 +46,7 @@ struct NetworkManger{
     }
     
     private func buildRequest(with endpoint: Endpoint) -> URLRequest? {
-        let queryParams = endpoint.params?.map {key, value in URLQueryItem(name: key, value: "\(value)")}
-        
+        let queryParams = endpoint.params?.map { key, value in URLQueryItem(name: key, value: "\(value)")}
         var urlComponents = URLComponents(string: endpoint.baseUrl + endpoint.path)
         urlComponents?.queryItems = queryParams
         
@@ -55,6 +54,9 @@ struct NetworkManger{
         
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = HTTPMethods.get.rawValue
+        //_ = endpoint.headers?.map { key, value in urlRequest.setValue(value, forHTTPHeaderField: key)}
+        urlRequest.allHTTPHeaderFields = endpoint.headers
+        
         return urlRequest
     }
 }
