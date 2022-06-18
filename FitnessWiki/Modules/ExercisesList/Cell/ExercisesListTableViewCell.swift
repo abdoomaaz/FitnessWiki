@@ -14,7 +14,7 @@ protocol ExercisesListTableViewCellInterface: AnyObject {
 final class ExercisesListTableViewCell: UITableViewCell {
     @IBOutlet private weak var exerciseName: UILabel!
     
-    private var vm: ExercisesListTableViewCellViewModel! {
+    private var vm: ExercisesListTableViewCellViewModelInterface! {
         didSet {
             vm.load()
         }

@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol ExercisesListViewInterface {
+protocol ExercisesListViewInterface: AnyObject {
     func prepareTableView()
     func reloadTableView()
 }
@@ -15,9 +15,22 @@ protocol ExercisesListViewInterface {
 final class ExercisesListViewController: UIViewController {
     @IBOutlet weak var exercisesListTableView: UITableView!
     
+    private var vm: ExercisesListViewModelInterface! {
+        didSet {
+            vm?.load()
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        prepareTableView()
+        commonInit()
+    }
+    
+    func commonInit() {
+        let provider = ExercisesServiceProvider()
+        let listVm = ExercisesListViewModel(view: self, provider: provider)
+        provider.output = listVm
+        vm = listVm
     }
 }
 
@@ -46,7 +59,7 @@ extension ExercisesListViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(with: ExercisesListTableViewCell.self, for: indexPath)
-        let cellVm = ExercisesListTableViewCellViewModel(exercise: <#T##Exercise#>, view: cell)
+//        let cellVm = ExercisesListTableViewCellViewModel(exercise: <#T##Exercise#>, view: cell)
         return cell
     }
     
