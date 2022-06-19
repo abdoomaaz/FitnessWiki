@@ -5,6 +5,7 @@
 //  Created by AbdooMaaz's playground on 18.06.22.
 //
 
+import UIKit
 import Foundation
 
 protocol ExercisesListViewModelInterface {
@@ -14,10 +15,13 @@ protocol ExercisesListViewModelInterface {
 }
 
 
-final class ExercisesListViewModel {
+final class ExercisesListViewModel: NSObject {
     private weak var view: ExercisesListViewInterface?
     private let provider: ExercisesServiceProviderInterface?
     private var exercises: [Exercise]?
+    
+    private static var didFetchVehicles = false
+    private static var offSet = 0
     
     init(view: ExercisesListViewInterface, provider: ExercisesServiceProviderInterface ){
         self.view = view
@@ -28,7 +32,7 @@ final class ExercisesListViewModel {
 
 // MARK: - ExercisesListViewModelInterface implementation
 extension ExercisesListViewModel: ExercisesListViewModelInterface {
-    var numberOfRows: Int { exercises?.count ?? 0 } 
+    var numberOfRows: Int { exercises?.count ?? 0 }
     
     func load() {
         view?.prepareTableView()
@@ -43,9 +47,12 @@ extension ExercisesListViewModel: ExercisesListViewModelInterface {
 // MARK: - Fetch Exercises
 extension ExercisesListViewModel {
     func fetchExercises() {
-        guard let apiKey = Constants.apiNinjaKey else {return}
-        let request = ExercisesListRequest(params: [:], headers: [Constants.apiHeaderKey: apiKey])
-        provider?.fetchExercises(req: request)
+        if !ExercisesListViewModel.didFetchVehicles {
+            guard let apiKey = Constants.apiNinjaKey else {return}
+            let request = ExercisesListRequest(params: ["offset": ExercisesListViewModel.offSet], headers: [Constants.apiHeaderKey: apiKey])
+            provider?.fetchExercises(req: request)
+            ExercisesListViewModel.offSet += 10
+        }
     }
 }
 
@@ -53,11 +60,29 @@ extension ExercisesListViewModel {
 extension ExercisesListViewModel: ExercisesServiceProviderOutput {
     func handleExercisesResult(_ result: ExercisesListResult) {
         switch result {
-        case .success(let exercises):
-            self.exercises = exercises
+        case .success(let response):
+            if var exercises = self.exercises {
+                exercises += response
+                self.exercises = exercises
+
+            } else {
+                self.exercises = response
+            }
+            
             view?.reloadTableView()
+            ExercisesListViewModel.didFetchVehicles = false
         case .failure(let err):
             print(err)
+        }
+    }
+}
+
+// MARK: - TableView Delegate
+extension ExercisesListViewModel: UITableViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if scrollView.contentSize.height - scrollView.contentOffset.y - scrollView.frame.height < 7 {
+            fetchExercises()
+            ExercisesListViewModel.didFetchVehicles = true
         }
     }
 }

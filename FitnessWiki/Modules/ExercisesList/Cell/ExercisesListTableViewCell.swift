@@ -12,7 +12,6 @@ protocol ExercisesListTableViewCellInterface: AnyObject {
     func setTargetedMuscle(_ text: String)
     func setExerciseType(_ text: String)
     func setDifficulty(_ text: String)
-
 }
 
 final class ExercisesListTableViewCell: UITableViewCell {

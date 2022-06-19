@@ -30,6 +30,7 @@ final class ExercisesListViewController: UIViewController {
         let provider = ExercisesServiceProvider()
         let listVm = ExercisesListViewModel(view: self, provider: provider)
         provider.output = listVm
+        exercisesListTableView.delegate = listVm
         vm = listVm
     }
 }
@@ -38,7 +39,6 @@ final class ExercisesListViewController: UIViewController {
 // MARK: - ExercisesListViewInterface Implementation
 extension ExercisesListViewController: ExercisesListViewInterface {
     func prepareTableView() {
-        exercisesListTableView.delegate = self
         exercisesListTableView.dataSource = self
         exercisesListTableView.register(cellType: ExercisesListTableViewCell.self)
     }
@@ -47,9 +47,6 @@ extension ExercisesListViewController: ExercisesListViewInterface {
         exercisesListTableView.reloadData()
     }
 }
-
-//MARK: - TabelViewDelegate
-extension ExercisesListViewController: UITableViewDelegate {}
 
 //MARK: - TableViewDataSource
 extension ExercisesListViewController: UITableViewDataSource {
