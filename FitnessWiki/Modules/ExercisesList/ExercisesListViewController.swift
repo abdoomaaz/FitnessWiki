@@ -54,14 +54,15 @@ extension ExercisesListViewController: UITableViewDelegate {}
 //MARK: - TableViewDataSource
 extension ExercisesListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return vm.numberOfRows
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(with: ExercisesListTableViewCell.self, for: indexPath)
-//        let cellVm = ExercisesListTableViewCellViewModel(exercise: <#T##Exercise#>, view: cell)
+        if let exercise = vm.exercise(for: indexPath.row) {
+            let cellVm = ExercisesListTableViewCellViewModel(exercise: exercise, view: cell)
+            cell.vm = cellVm
+        }
         return cell
     }
-    
-    
 }

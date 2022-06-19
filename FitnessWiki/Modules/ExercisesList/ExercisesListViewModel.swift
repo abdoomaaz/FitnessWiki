@@ -8,7 +8,9 @@
 import Foundation
 
 protocol ExercisesListViewModelInterface {
+    var numberOfRows: Int { get }
     func load()
+    func exercise(for index: Int) -> Exercise?
 }
 
 
@@ -26,16 +28,23 @@ final class ExercisesListViewModel {
 
 // MARK: - ExercisesListViewModelInterface implementation
 extension ExercisesListViewModel: ExercisesListViewModelInterface {
+    var numberOfRows: Int { exercises?.count ?? 0 } 
+    
     func load() {
         view?.prepareTableView()
         fetchExercises()
+    }
+    
+    func exercise(for index: Int) -> Exercise? {
+        exercises?[safe: index]
     }
 }
 
 // MARK: - Fetch Exercises
 extension ExercisesListViewModel {
     func fetchExercises() {
-        let request = ExercisesListRequest(params: [:], headers: ["X-Api-Key":"API_KEY"])
+        guard let apiKey = Constants.apiNinjaKey else {return}
+        let request = ExercisesListRequest(params: [:], headers: [Constants.apiHeaderKey: apiKey])
         provider?.fetchExercises(req: request)
     }
 }
@@ -44,10 +53,19 @@ extension ExercisesListViewModel {
 extension ExercisesListViewModel: ExercisesServiceProviderOutput {
     func handleExercisesResult(_ result: ExercisesListResult) {
         switch result {
-        case .success(let exercises): print(exercises)
+        case .success(let exercises):
+            self.exercises = exercises
+            view?.reloadTableView()
         case .failure(let err):
             print(err)
         }
     }
 }
 
+// MARK: - Constants
+private extension ExercisesListViewModel {
+    enum Constants {
+        static let apiNinjaKey = Bundle.main.infoDictionary?["API_NINJA_KEY"] as? String ?? nil
+        static let apiHeaderKey = "X-Api-Key"
+    }
+}

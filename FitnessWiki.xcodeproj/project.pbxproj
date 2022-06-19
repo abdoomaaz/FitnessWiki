@@ -12,7 +12,6 @@
 		6E2A00E3285CF397004B57F2 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E2A00E2285CF397004B57F2 /* TabBarViewController.swift */; };
 		6E83F973285B94470070A8A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E83F972285B94470070A8A9 /* AppDelegate.swift */; };
 		6E83F975285B94470070A8A9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E83F974285B94470070A8A9 /* SceneDelegate.swift */; };
-		6E83F977285B94470070A8A9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E83F976285B94470070A8A9 /* ViewController.swift */; };
 		6E83F97A285B94470070A8A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E83F978285B94470070A8A9 /* Main.storyboard */; };
 		6E83F97C285B94480070A8A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E83F97B285B94480070A8A9 /* Assets.xcassets */; };
 		6E83F97F285B94480070A8A9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E83F97D285B94480070A8A9 /* LaunchScreen.storyboard */; };
@@ -26,6 +25,7 @@
 		6ECA45AC285DF84800DEE011 /* NSObject+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ECA45AB285DF84800DEE011 /* NSObject+Extensions.swift */; };
 		6ECA45AE285E03AC00DEE011 /* ExercisesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ECA45AD285E03AC00DEE011 /* ExercisesListViewModel.swift */; };
 		6ECA45B0285E0D7B00DEE011 /* ExercisesServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ECA45AF285E0D7B00DEE011 /* ExercisesServiceProvider.swift */; };
+		6ECA45B5285F77B400DEE011 /* Collection+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ECA45B4285F77B400DEE011 /* Collection+Extensions.swift */; };
 		6EE0E248285BAAD60048D036 /* NetworkManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE0E247285BAAD60048D036 /* NetworkManger.swift */; };
 		6EE0E24A285BAC080048D036 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE0E249285BAC080048D036 /* Endpoint.swift */; };
 		6EE0E24C285BAD530048D036 /* HTTPMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE0E24B285BAD530048D036 /* HTTPMethods.swift */; };
@@ -38,7 +38,6 @@
 		6E83F96F285B94470070A8A9 /* FitnessWiki.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitnessWiki.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E83F972285B94470070A8A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6E83F974285B94470070A8A9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		6E83F976285B94470070A8A9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6E83F979285B94470070A8A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6E83F97B285B94480070A8A9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6E83F97E285B94480070A8A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -53,6 +52,8 @@
 		6ECA45AB285DF84800DEE011 /* NSObject+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Extensions.swift"; sourceTree = "<group>"; };
 		6ECA45AD285E03AC00DEE011 /* ExercisesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisesListViewModel.swift; sourceTree = "<group>"; };
 		6ECA45AF285E0D7B00DEE011 /* ExercisesServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisesServiceProvider.swift; sourceTree = "<group>"; };
+		6ECA45B3285E708400DEE011 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		6ECA45B4285F77B400DEE011 /* Collection+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Extensions.swift"; sourceTree = "<group>"; };
 		6EE0E247285BAAD60048D036 /* NetworkManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManger.swift; sourceTree = "<group>"; };
 		6EE0E249285BAC080048D036 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		6EE0E24B285BAD530048D036 /* HTTPMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethods.swift; sourceTree = "<group>"; };
@@ -127,7 +128,6 @@
 				6EE0E243285BA0690048D036 /* AppDelegate */,
 				6EE0E244285BA0B20048D036 /* Extensions */,
 				6EE0E245285BA0C00048D036 /* Modules */,
-				6E83F976285B94470070A8A9 /* ViewController.swift */,
 				6EE0E246285BA0EC0048D036 /* Networking */,
 				6E83F986285B9F7B0070A8A9 /* Resources */,
 				6E83F97D285B94480070A8A9 /* LaunchScreen.storyboard */,
@@ -140,6 +140,7 @@
 			children = (
 				6E83F980285B94480070A8A9 /* Info.plist */,
 				6E83F97B285B94480070A8A9 /* Assets.xcassets */,
+				6ECA45B3285E708400DEE011 /* Config.xcconfig */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -169,6 +170,7 @@
 				6ECA45A7285DF65800DEE011 /* UITableView+Extensions.swift */,
 				6ECA45A9285DF7D000DEE011 /* UITableViewCell+Extensions.swift */,
 				6ECA45AB285DF84800DEE011 /* NSObject+Extensions.swift */,
+				6ECA45B4285F77B400DEE011 /* Collection+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -271,13 +273,13 @@
 				6ECA45AE285E03AC00DEE011 /* ExercisesListViewModel.swift in Sources */,
 				6ECA45A8285DF65800DEE011 /* UITableView+Extensions.swift in Sources */,
 				6ECA45A6285DEFE300DEE011 /* ExercisesListTableViewCellViewModel.swift in Sources */,
-				6E83F977285B94470070A8A9 /* ViewController.swift in Sources */,
 				6E010138285D4BB800A9F947 /* Exercise.swift in Sources */,
 				6E83F973285B94470070A8A9 /* AppDelegate.swift in Sources */,
 				6ECA45A3285DEBFE00DEE011 /* ExercisesListTableViewCell.swift in Sources */,
 				6ECA45AC285DF84800DEE011 /* NSObject+Extensions.swift in Sources */,
 				6EE0E24C285BAD530048D036 /* HTTPMethods.swift in Sources */,
 				6ECA45AA285DF7D000DEE011 /* UITableViewCell+Extensions.swift in Sources */,
+				6ECA45B5285F77B400DEE011 /* Collection+Extensions.swift in Sources */,
 				6E01013B285D4CE100A9F947 /* ExerciseEndpoint.swift in Sources */,
 				6EE0E248285BAAD60048D036 /* NetworkManger.swift in Sources */,
 				6E2A00E3285CF397004B57F2 /* TabBarViewController.swift in Sources */,
@@ -426,6 +428,7 @@
 		};
 		6E83F984285B94480070A8A9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6ECA45B3285E708400DEE011 /* Config.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -453,6 +456,7 @@
 		};
 		6E83F985285B94480070A8A9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6ECA45B3285E708400DEE011 /* Config.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

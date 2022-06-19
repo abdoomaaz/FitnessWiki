@@ -26,6 +26,9 @@ final class ExercisesListTableViewCellViewModel {
 extension ExercisesListTableViewCellViewModel: ExercisesListTableViewCellViewModelInterface {
     func load() {
         view?.setExerciseName(exercise.name)
+        view?.setExerciseType(exercise.type)
+        view?.setTargetedMuscle(exercise.muscle)
+        view?.setDifficulty(exercise.difficulty)
     }
 }
 
