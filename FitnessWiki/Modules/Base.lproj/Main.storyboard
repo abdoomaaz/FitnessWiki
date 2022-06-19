@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XQN-dk-BFH">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Exercises-->
+        <scene sceneID="Uix-Nx-HeX">
+            <objects>
+                <viewController id="ZMu-lY-VlF" customClass="ExercisesListViewController" customModule="FitnessWiki" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jkB-vB-foA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="jnQ-z1-oF2">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="NuL-Uc-jGF"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="jnQ-z1-oF2" firstAttribute="leading" secondItem="NuL-Uc-jGF" secondAttribute="leading" id="63U-K7-h8g"/>
+                            <constraint firstItem="NuL-Uc-jGF" firstAttribute="trailing" secondItem="jnQ-z1-oF2" secondAttribute="trailing" id="biT-hx-eAt"/>
+                            <constraint firstItem="NuL-Uc-jGF" firstAttribute="bottom" secondItem="jnQ-z1-oF2" secondAttribute="bottom" id="gVC-2X-fCE"/>
+                            <constraint firstItem="jnQ-z1-oF2" firstAttribute="top" secondItem="NuL-Uc-jGF" secondAttribute="top" id="tUK-LA-n3d"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Exercises" image="list.bullet" catalog="system" id="zrI-XV-F5B"/>
+                    <connections>
+                        <outlet property="exercisesListTableView" destination="jnQ-z1-oF2" id="6IW-SN-6yw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IhK-kH-Lze" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1510.144927536232" y="567.1875"/>
+        </scene>
+        <!--Tab Bar View Controller-->
+        <scene sceneID="a7h-PZ-KJi">
+            <objects>
+                <tabBarController id="XQN-dk-BFH" customClass="TabBarViewController" customModule="FitnessWiki" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Aft-Vi-kVe">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="ZMu-lY-VlF" kind="relationship" relationship="viewControllers" id="PBo-Wu-4TL"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xff-li-JuK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-643" y="-145"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="list.bullet" catalog="system" width="128" height="88"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
