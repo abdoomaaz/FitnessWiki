@@ -64,12 +64,10 @@ extension ExercisesListViewModel: ExercisesServiceProviderOutput {
             switch error {
             case .apiError(let errorMessage):
                 if let message = errorMessage {
-                    let errorAlert = createAlert(title: Constants.loadingErrorTitle, message: message)
-                    view?.showAlert(errorAlert, animated: true)
+                    showAlert(title: Constants.loadingErrorTitle, message: message)
                 }
             case .decodingError, .urlError:
-                let errorAlert = createAlert(title: Constants.loadingErrorTitle, message: Constants.internalErrorMsg)
-                view?.showAlert(errorAlert, animated: true)
+                showAlert(title: Constants.loadingErrorTitle, message: Constants.internalErrorMsg)
             }
         }
     }
@@ -91,8 +89,7 @@ private extension ExercisesListViewModel {
     func fetchExercises() {
         if !ExercisesListViewModel.didFetchVehicles {
             guard let apiKey = Constants.apiNinjaKey else {
-                let apiKeyNotFoundAlert = createAlert(title: Constants.internalErrorTitle , message: Constants.internalErrorMsg )
-                self.view?.showAlert(apiKeyNotFoundAlert, animated: true)
+                showAlert(title: Constants.internalErrorTitle , message: Constants.internalErrorMsg )
                 NSLog("API-Key is nil, check for typos?")
                 return
             }
@@ -104,10 +101,12 @@ private extension ExercisesListViewModel {
         }
     }
     
-    func createAlert(title: String, message: String) -> UIAlertController {
-       let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-       alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default))
-       return alert
+    func showAlert(title: String, message: String) {
+        DispatchQueue.main.async { [weak self] in
+            let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default))
+            self?.view?.showAlert(alert, animated: true)
+        }
     }
 }
 

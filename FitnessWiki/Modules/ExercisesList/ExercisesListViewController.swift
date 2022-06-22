@@ -49,9 +49,7 @@ extension ExercisesListViewController: ExercisesListViewInterface {
     }
     
     func showAlert(_ alert: UIAlertController, animated: Bool) {
-        DispatchQueue.main.async {
-            self.present(alert, animated: true, completion: nil)
-        }
+        self.present(alert, animated: true, completion: nil)
     }
 }
 
