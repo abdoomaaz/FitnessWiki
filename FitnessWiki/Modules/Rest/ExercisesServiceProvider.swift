@@ -26,7 +26,7 @@ final class ExercisesServiceProvider {
 extension ExercisesServiceProvider: ExercisesServiceProviderInterface {
     func fetchExercises(req: ExercisesListRequest) {
         networkManger.request(endpoint: ExerciseEndpoint.exersicesList(request: req), type: [Exercise].self) { [weak self] result in
-            self?.output?.handleExercisesResult(result )
+            self?.output?.handleExercisesResult(result)
         }
     }
 }

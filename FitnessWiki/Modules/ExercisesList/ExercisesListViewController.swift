@@ -10,6 +10,7 @@ import UIKit
 protocol ExercisesListViewInterface: AnyObject {
     func prepareTableView()
     func reloadTableView()
+    func showAlert(_ alert: UIAlertController, animated: Bool )
 }
 
 final class ExercisesListViewController: UIViewController {
@@ -45,6 +46,10 @@ extension ExercisesListViewController: ExercisesListViewInterface {
     
     func reloadTableView() {
         exercisesListTableView.reloadData()
+    }
+    
+    func showAlert(_ alert: UIAlertController, animated: Bool) {
+        self.present(alert, animated: true, completion: nil)
     }
 }
 
