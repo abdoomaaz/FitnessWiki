@@ -64,10 +64,10 @@ extension ExercisesListViewModel: ExercisesServiceProviderOutput {
             switch error {
             case .apiError(let errorMessage):
                 if let message = errorMessage {
-                    showAlert(title: Constants.loadingErrorTitle, message: message)
+                    forwardAlert(title: Constants.loadingErrorTitle, message: message)
                 }
             case .decodingError, .urlError:
-                showAlert(title: Constants.loadingErrorTitle, message: Constants.internalErrorMsg)
+                forwardAlert(title: Constants.loadingErrorTitle, message: Constants.internalErrorMsg)
             }
         }
     }
@@ -89,7 +89,7 @@ private extension ExercisesListViewModel {
     func fetchExercises() {
         if !ExercisesListViewModel.didFetchVehicles {
             guard let apiKey = Constants.apiNinjaKey else {
-                showAlert(title: Constants.internalErrorTitle , message: Constants.internalErrorMsg )
+                forwardAlert(title: Constants.internalErrorTitle , message: Constants.internalErrorMsg )
                 NSLog("API-Key is nil, check for typos?")
                 return
             }
@@ -101,7 +101,7 @@ private extension ExercisesListViewModel {
         }
     }
     
-    func showAlert(title: String, message: String) {
+    func forwardAlert(title: String, message: String) {
         DispatchQueue.main.async { [weak self] in
             let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default))

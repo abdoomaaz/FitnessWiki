@@ -59,7 +59,7 @@ final class ExercisesListViewModelTests: XCTestCase {
         viewmodel.handleExercisesResult(.failure(.apiError("Error")))
         
         XCTAssertFalse(mockView.invokedReloadTableView)
-        // TODO: fix failing edge case
+        // TODO: fix failing edge case, method not being invoked Directly, thus failing
         // XCTAssertTrue(mockView.invokedShowAlert)
     }
     
@@ -71,7 +71,7 @@ final class ExercisesListViewModelTests: XCTestCase {
         XCTAssertEqual(viewmodel.exercise(for: 1)?.muscle, "biceps")
     }
     
-    func test_exercises_Failure_ReturnExercise() {        
+    func test_exercises_Failure_ReturnExercise() {
         viewmodel.handleExercisesResult(.failure(.apiError("Error")))
         
         XCTAssertNil(viewmodel.exercise(for: 1)?.muscle)
