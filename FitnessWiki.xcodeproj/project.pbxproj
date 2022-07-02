@@ -10,6 +10,11 @@
 		6E010138285D4BB800A9F947 /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E010137285D4BB800A9F947 /* Exercise.swift */; };
 		6E01013B285D4CE100A9F947 /* ExerciseEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E01013A285D4CE100A9F947 /* ExerciseEndpoint.swift */; };
 		6E2A00E3285CF397004B57F2 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E2A00E2285CF397004B57F2 /* TabBarViewController.swift */; };
+		6E56C0AD286A5F3D0076414E /* MockExercisesListResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 6E56C0AC286A5F3D0076414E /* MockExercisesListResponse.json */; };
+		6E56C0B0286A61130076414E /* JSONDecoder+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E56C0AF286A61130076414E /* JSONDecoder+Extensions.swift */; };
+		6E56C0B3286A62C80076414E /* MockExercisesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E56C0B2286A62C80076414E /* MockExercisesListView.swift */; };
+		6E56C0B5286A641E0076414E /* ExercisesListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E56C0B4286A641E0076414E /* ExercisesListViewModelTests.swift */; };
+		6E56C0B8286A65A60076414E /* MockExercisesServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E56C0B7286A65A60076414E /* MockExercisesServiceProvider.swift */; };
 		6E83F973285B94470070A8A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E83F972285B94470070A8A9 /* AppDelegate.swift */; };
 		6E83F975285B94470070A8A9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E83F974285B94470070A8A9 /* SceneDelegate.swift */; };
 		6E83F97A285B94470070A8A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E83F978285B94470070A8A9 /* Main.storyboard */; };
@@ -31,10 +36,26 @@
 		6EE0E24C285BAD530048D036 /* HTTPMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE0E24B285BAD530048D036 /* HTTPMethods.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		6E56C0A3286A5D6D0076414E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6E83F967285B94470070A8A9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6E83F96E285B94470070A8A9;
+			remoteInfo = FitnessWiki;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		6E010137285D4BB800A9F947 /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
 		6E01013A285D4CE100A9F947 /* ExerciseEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseEndpoint.swift; sourceTree = "<group>"; };
 		6E2A00E2285CF397004B57F2 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		6E56C09F286A5D6D0076414E /* FitnessWikiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FitnessWikiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E56C0AC286A5F3D0076414E /* MockExercisesListResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MockExercisesListResponse.json; sourceTree = "<group>"; };
+		6E56C0AF286A61130076414E /* JSONDecoder+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONDecoder+Extensions.swift"; sourceTree = "<group>"; };
+		6E56C0B2286A62C80076414E /* MockExercisesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockExercisesListView.swift; sourceTree = "<group>"; };
+		6E56C0B4286A641E0076414E /* ExercisesListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisesListViewModelTests.swift; sourceTree = "<group>"; };
+		6E56C0B7286A65A60076414E /* MockExercisesServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockExercisesServiceProvider.swift; sourceTree = "<group>"; };
 		6E83F96F285B94470070A8A9 /* FitnessWiki.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitnessWiki.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E83F972285B94470070A8A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6E83F974285B94470070A8A9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +81,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		6E56C09C286A5D6D0076414E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6E83F96C285B94470070A8A9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -99,17 +127,70 @@
 		6E2A00E1285CF283004B57F2 /* ExercisesList */ = {
 			isa = PBXGroup;
 			children = (
-				6ECA45A0285DEB8300DEE011 /* Cell */,
 				6ECA459D285DD85D00DEE011 /* ExercisesListViewController.swift */,
 				6ECA45AD285E03AC00DEE011 /* ExercisesListViewModel.swift */,
+				6ECA45A0285DEB8300DEE011 /* Cell */,
 			);
 			path = ExercisesList;
+			sourceTree = "<group>";
+		};
+		6E56C0A0286A5D6D0076414E /* FitnessWikiTests */ = {
+			isa = PBXGroup;
+			children = (
+				6E56C0AE286A60BB0076414E /* Extensions */,
+				6E56C0A8286A5DAA0076414E /* Modules */,
+			);
+			path = FitnessWikiTests;
+			sourceTree = "<group>";
+		};
+		6E56C0A8286A5DAA0076414E /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				6E56C0A9286A5E4C0076414E /* Entity */,
+				6E56C0B6286A656B0076414E /* Rest */,
+				6E56C0B1286A62880076414E /* ExercisesList */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		6E56C0A9286A5E4C0076414E /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				6E56C0AC286A5F3D0076414E /* MockExercisesListResponse.json */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		6E56C0AE286A60BB0076414E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				6E56C0AF286A61130076414E /* JSONDecoder+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		6E56C0B1286A62880076414E /* ExercisesList */ = {
+			isa = PBXGroup;
+			children = (
+				6E56C0B2286A62C80076414E /* MockExercisesListView.swift */,
+				6E56C0B4286A641E0076414E /* ExercisesListViewModelTests.swift */,
+			);
+			path = ExercisesList;
+			sourceTree = "<group>";
+		};
+		6E56C0B6286A656B0076414E /* Rest */ = {
+			isa = PBXGroup;
+			children = (
+				6E56C0B7286A65A60076414E /* MockExercisesServiceProvider.swift */,
+			);
+			path = Rest;
 			sourceTree = "<group>";
 		};
 		6E83F966285B94470070A8A9 = {
 			isa = PBXGroup;
 			children = (
 				6E83F971285B94470070A8A9 /* FitnessWiki */,
+				6E56C0A0286A5D6D0076414E /* FitnessWikiTests */,
 				6E83F970285B94470070A8A9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -118,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				6E83F96F285B94470070A8A9 /* FitnessWiki.app */,
+				6E56C09F286A5D6D0076414E /* FitnessWikiTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -200,6 +282,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		6E56C09E286A5D6D0076414E /* FitnessWikiTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6E56C0A7286A5D6D0076414E /* Build configuration list for PBXNativeTarget "FitnessWikiTests" */;
+			buildPhases = (
+				6E56C09B286A5D6D0076414E /* Sources */,
+				6E56C09C286A5D6D0076414E /* Frameworks */,
+				6E56C09D286A5D6D0076414E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6E56C0A4286A5D6D0076414E /* PBXTargetDependency */,
+			);
+			name = FitnessWikiTests;
+			productName = FitnessWikiTests;
+			productReference = 6E56C09F286A5D6D0076414E /* FitnessWikiTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		6E83F96E285B94470070A8A9 /* FitnessWiki */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6E83F983285B94480070A8A9 /* Build configuration list for PBXNativeTarget "FitnessWiki" */;
@@ -227,6 +327,11 @@
 				LastSwiftUpdateCheck = 1340;
 				LastUpgradeCheck = 1340;
 				TargetAttributes = {
+					6E56C09E286A5D6D0076414E = {
+						CreatedOnToolsVersion = 13.4;
+						LastSwiftMigration = 1340;
+						TestTargetID = 6E83F96E285B94470070A8A9;
+					};
 					6E83F96E285B94470070A8A9 = {
 						CreatedOnToolsVersion = 13.4;
 					};
@@ -246,11 +351,20 @@
 			projectRoot = "";
 			targets = (
 				6E83F96E285B94470070A8A9 /* FitnessWiki */,
+				6E56C09E286A5D6D0076414E /* FitnessWikiTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		6E56C09D286A5D6D0076414E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E56C0AD286A5F3D0076414E /* MockExercisesListResponse.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6E83F96D285B94470070A8A9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -265,6 +379,17 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		6E56C09B286A5D6D0076414E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E56C0B5286A641E0076414E /* ExercisesListViewModelTests.swift in Sources */,
+				6E56C0B3286A62C80076414E /* MockExercisesListView.swift in Sources */,
+				6E56C0B8286A65A60076414E /* MockExercisesServiceProvider.swift in Sources */,
+				6E56C0B0286A61130076414E /* JSONDecoder+Extensions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6E83F96B285B94470070A8A9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -292,6 +417,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		6E56C0A4286A5D6D0076414E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6E83F96E285B94470070A8A9 /* FitnessWiki */;
+			targetProxy = 6E56C0A3286A5D6D0076414E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		6E83F978285B94470070A8A9 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -312,6 +445,53 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		6E56C0A5286A5D6D0076414E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.abdulrahmanmaaz.FitnessWikiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FitnessWiki.app/FitnessWiki";
+			};
+			name = Debug;
+		};
+		6E56C0A6286A5D6D0076414E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.abdulrahmanmaaz.FitnessWikiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FitnessWiki.app/FitnessWiki";
+			};
+			name = Release;
+		};
 		6E83F981285B94480070A8A9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -485,6 +665,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		6E56C0A7286A5D6D0076414E /* Build configuration list for PBXNativeTarget "FitnessWikiTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6E56C0A5286A5D6D0076414E /* Debug */,
+				6E56C0A6286A5D6D0076414E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		6E83F96A285B94470070A8A9 /* Build configuration list for PBXProject "FitnessWiki" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
