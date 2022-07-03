@@ -15,6 +15,7 @@ protocol ExercisesListViewInterface: AnyObject {
 
 final class ExercisesListViewController: UIViewController {
     @IBOutlet weak var exercisesListTableView: UITableView!
+    @IBOutlet weak var searchBar: UISearchBar!
     
     private var vm: ExercisesListViewModelInterface! {
         didSet {
@@ -32,6 +33,7 @@ final class ExercisesListViewController: UIViewController {
         let listVm = ExercisesListViewModel(view: self, provider: provider)
         provider.output = listVm
         exercisesListTableView.delegate = listVm
+        searchBar.delegate = listVm
         vm = listVm
     }
 }

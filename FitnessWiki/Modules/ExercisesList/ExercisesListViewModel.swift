@@ -84,6 +84,31 @@ extension ExercisesListViewModel: UITableViewDelegate {
     }
 }
 
+// MARK: - Searchbar Delegate
+extension ExercisesListViewModel: UISearchBarDelegate {
+    func searchBarShouldBeginEditing(_ searchBar: UISearchBar) -> Bool {
+        searchBar.showsCancelButton = true
+        return true
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+       
+        if searchBar.text == "" {
+            searchBar.endEditing(true)
+        }
+        else {
+        // TODO: send request with params
+        }
+        searchBar.showsCancelButton = true
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.text = ""
+        searchBar.showsCancelButton = false
+        searchBar.endEditing(true)
+    }
+}
+
 // MARK: - Private Functions
 private extension ExercisesListViewModel {
     func fetchExercises() {
